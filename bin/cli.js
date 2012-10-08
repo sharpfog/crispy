@@ -29,6 +29,11 @@ var argv = require('optimist')
       'default': './_layouts',
       description: 'Location for layout files'
   })
+  .option('verbose', {
+      alias: 'v',
+      'default': false,
+      description: 'display detailed output'
+  })
   .option('help', {
       alias: 'h',
       description: 'display this help message'
@@ -51,6 +56,9 @@ config.mode = argv.mode || config.mode;
 config.port = argv.port || config.port;
 config.public = argv.public || config.public;
 config.layouts = argv.layouts || config.layouts;
+
+if (argv.verbose)
+  crispy.setLogLevel('debug');
 
 if (argv.mode == "generate")
   crispy.generate(config);
