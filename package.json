@@ -1,0 +1,25 @@
+{
+  "name": "Crispy",
+  "description": "Static (or not) site generator",
+  "author": "sharpfog <me@sharpfog.com>",
+  "version": "0.0.1",
+  "license" : "MIT",
+  "dependencies": {
+    "handlebars": "1.0.7",
+    "optimist": ">=0.3.4",
+    "node-static": ">=0.6.2",
+    "mime": "1.2.6",
+    "wrench": "1.3.9",
+    "yaml": "0.2.3"
+  },
+  "devDependencies": {
+    "vows": "0.5.x",
+    "mocha": "*",
+    "should": "*"
+  },
+  "engine": "node >= 0.6.6",
+  "main" : "lib/crispy",
+  "bin": {
+    "crispy": "./bin/cli.js"
+  }
+}
