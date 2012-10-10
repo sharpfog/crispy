@@ -32,7 +32,8 @@ var argv = require('optimist')
   .option('verbose', {
       alias: 'v',
       'default': false,
-      description: 'display detailed output'
+      description: 'display detailed output',
+      boolean: true
   })
   .option('help', {
       alias: 'h',
