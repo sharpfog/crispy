@@ -1,16 +1,16 @@
 {
-  "name": "Crispy",
+  "name": "crispy",
   "description": "Static (or not) site generator",
   "author": "sharpfog <me@sharpfog.com>",
   "version": "0.0.1",
   "license" : "MIT",
   "dependencies": {
+    "done": "0.0.1",
     "handlebars": "1.0.7",
     "log": "1.3.0",
     "optimist": ">=0.3.4",
     "node-static": ">=0.6.2",
     "mime": "1.2.6",
-    "wrench": "1.3.9",
     "yaml": "0.2.3"
   },
   "devDependencies": {
