@@ -46,7 +46,7 @@ if (argv.help){
     process.exit(0);
 }
   
-var dir = argv._[0] || '.';
+var dir = argv._[0] || './';
 var config = {};
 try { config = require(path.join(dir, "_config.json")); }
 catch (ex) {}
