@@ -1,0 +1,68 @@
+html {
+  margin: 30px; 
+}
+
+body {
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+header, section, footer div {
+  display: block;
+}
+
+.container {
+  width: 786px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 52px;
+  font-weight: lighter;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.navlist {
+  text-align: center;
+}
+
+.navlist li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.post {
+  margin-bottom: 35px;
+}
+
+.post h1 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.post h1 a {
+  text-decoration:none;
+  color: #000;
+}
+
+.post .date {
+  font-size: 12px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px dotted #CCC;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
