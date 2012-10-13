@@ -30,11 +30,9 @@ var argv = require('optimist')
       description: 'Location for layout files'
   })
   .option('title', {
-      'default': 'mysite',
       description: 'Title of the site'
   })
   .option('url', {
-      'default': 'http://example.com/',
       description: 'Base url of the site (used mostly for rss stuff)'
   })
   .option('verbose', {
@@ -56,6 +54,10 @@ if (argv.help){
   
 var dir = argv._[0] || './';
 var config = {};
+
+require.extensions[".json"] = function (m) {
+ m.exports = JSON.parse(fs.readFileSync(m.filename));
+};
 try { config = require(path.join(dir, "_config.json")); }
 catch (ex) {}
 
@@ -65,10 +67,11 @@ config.mode = argv.mode || config.mode;
 config.port = argv.port || config.port;
 config.public = argv.public || config.public;
 config.layouts = argv.layouts || config.layouts;
-config.title = argv.title || config.title;
+config.title = argv.title || config.title || "mysite"
 config.description = argv.description || config.description;
 config.author = argv.author || config.author;
-config.url = argv.url || config.url;
+config.url = argv.url || config.url || "http://example.com";
+
 
 if (argv.verbose)
   crispy.setLogLevel('debug');
