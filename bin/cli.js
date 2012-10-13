@@ -29,6 +29,14 @@ var argv = require('optimist')
       'default': './_layouts',
       description: 'Location for layout files'
   })
+  .option('title', {
+      'default': 'mysite',
+      description: 'Title of the site'
+  })
+  .option('url', {
+      'default': 'http://example.com/',
+      description: 'Base url of the site (used mostly for rss stuff)'
+  })
   .option('verbose', {
       alias: 'v',
       'default': false,
@@ -57,6 +65,10 @@ config.mode = argv.mode || config.mode;
 config.port = argv.port || config.port;
 config.public = argv.public || config.public;
 config.layouts = argv.layouts || config.layouts;
+config.title = argv.title || config.title;
+config.description = argv.description || config.description;
+config.author = argv.author || config.author;
+config.url = argv.url || config.url;
 
 if (argv.verbose)
   crispy.setLogLevel('debug');
